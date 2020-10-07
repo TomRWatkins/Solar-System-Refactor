@@ -3,7 +3,6 @@
  * @author Thomas Watkins
  */
 public class ModelSolarSystem {	
-	
 	static final int CONST_OBJS = 14;
 	static final int J_MOONS = 70;
 	static final int ASTEROIDS = 250;

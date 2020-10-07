@@ -12,8 +12,8 @@ public class Sun extends SpaceObject {
 	 * @param velocity the velocity of this sun.
 	 * @param colour the colour of this sun.
 	 */
-	public Sun(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity) {		
-		super(solarSystem, distance, angle, diameter, velocity, "YELLOW");		
+	public Sun(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity, String colour) {		
+		super(solarSystem, distance, angle, diameter, velocity, colour);		
 	}	
 	
 	/**
