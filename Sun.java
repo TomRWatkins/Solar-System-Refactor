@@ -17,7 +17,7 @@ public class Sun extends SpaceObject {
 	}	
 	
 	/**
-	 * Shows the Sun on the screen in the solar system. 
+	 * Displays the Sun to the screen. 
 	 */
 	public void move() {		
 		this.solarSystem.drawSolarObject(0, 0, this.diameter, this.colour);

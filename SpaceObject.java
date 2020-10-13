@@ -26,7 +26,7 @@ abstract public class SpaceObject {
 	}	
 	
 	/**
-	 * To be implemented by subclasses, this class displays and moves the Space Object within the Solar System.
+	 * To be implemented by subclasses to display and move the Space Object within the Solar System.
 	 */
 	abstract public void move();
 }

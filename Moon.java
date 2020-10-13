@@ -19,7 +19,7 @@ public class Moon extends SpaceObject{
 		this.planetAbout = (Planet) planetAbout;		
 	}	
 	/**
-	 * Moves this Moon by it's own orbital velocity, around the planet it orbits
+	 * Moves this Moon by it's orbital velocity, around the planet it orbits.
 	 */
 	public void move() {				
 		solarSystem.drawSolarObjectAbout(this.planetAbout.getPoint().getDistance(), this.planetAbout.getPoint().getAngle(),

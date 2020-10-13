@@ -3,7 +3,7 @@
  * @author Thomas Watkins
  */
 public class ModelSolarSystem {	
-	static final int CONST_OBJS = 14;
+	static final int CONST_OBJS = 16;
 	static final int J_MOONS = 70;
 	static final int ASTEROIDS = 250;
 	static final int STARS = 250;
@@ -22,20 +22,22 @@ public class ModelSolarSystem {
 		SolarSystem solarSystem = new SolarSystem(1200, 750);
 		SpaceObject spaceObjects[] = new SpaceObject[TOTAL_OBJS+STARS];
 		
-		spaceObjects[0] = new Sun(solarSystem, 0, 0, 60, 0, "YELLOW"); 						  //Sun
+		spaceObjects[0] = new Sun(solarSystem, 0, 0, 65, 0, "YELLOW"); 						  //Sun
 		spaceObjects[1] = new Planet(solarSystem, 180, 100, 20, 0.9, "BLUE"); 				  //Earth
 		spaceObjects[2] = new Moon(spaceObjects[1], solarSystem, 30, 0, 10, 5); 	          //Earths Moon
 		spaceObjects[3] = new Planet(solarSystem, 60, 200, 15, 1.5, "WHITE"); 				  //Mercury
 		spaceObjects[4] = new Planet(solarSystem, 110, 400, 15, 1, "ORANGE"); 				  //Venus
-		spaceObjects[5] = new Planet(solarSystem, 250, 600, 19, -0.5, "RED");  				  //Mars
+		spaceObjects[5] = new Planet(solarSystem, 250, 600, 19, 0.5, "RED");  				  //Mars
 		spaceObjects[6] = new Moon(spaceObjects[5], solarSystem, 30, 1210, 10, 3.5);          //Deimos
-		spaceObjects[7] = new Moon(spaceObjects[5], solarSystem, 50, 0, 10, 1.4);             //Phobos
-		spaceObjects[8] = new Planet(solarSystem, 450, -12900, 50, 0.5, "PINK"); 			  //Jupiter		
-		spaceObjects[9] = new Planet(solarSystem, 500, 750, 80, 0.9, "PINK"); 				  //Saturn Outer Ring
-		spaceObjects[10] = new Planet(solarSystem, 500, 750, 75, 0.9, "BLACK"); 			  //Saturn Black Space
-		spaceObjects[11] = new Planet(solarSystem, 500, 750, 65, 0.9, "PINK"); 			      //Saturn Inner Ring
-		spaceObjects[12] = new Planet(solarSystem, 500, 750, 60, 0.9, "BLACK"); 			  //Saturn Black Space
-		spaceObjects[13] = new Planet(solarSystem, 500, 750, 35, 0.9, "YELLOW"); 			  //Saturn
+		spaceObjects[7] = new Moon(spaceObjects[5], solarSystem, 50, 0, 10, 2.8);             //Phobos
+		spaceObjects[8] = new Planet(solarSystem, 450, 180, 50, 0.4, "PINK"); 			      //Jupiter		
+		spaceObjects[9] = new Planet(solarSystem, 500, 750, 80, 0.3, "PINK"); 				  //Saturn Outer Ring
+		spaceObjects[10] = new Planet(solarSystem, 500, 750, 75, 0.3, "BLACK"); 			  //Saturn Black Space
+		spaceObjects[11] = new Planet(solarSystem, 500, 750, 65, 0.3, "PINK"); 			      //Saturn Inner Ring
+		spaceObjects[12] = new Planet(solarSystem, 500, 750, 60, 0.3, "BLACK"); 			  //Saturn Black Space
+		spaceObjects[13] = new Planet(solarSystem, 500, 750, 35, 0.3, "YELLOW"); 			  //Saturn
+		spaceObjects[14] = new Planet(solarSystem, 220, 750, 25, 0.9, "CYAN"); 			      //Uranus
+		spaceObjects[15] = new Planet(solarSystem, 180, 150, 31, 1.06, "DARK_GRAY"); 	      //Neptune
 		
 		//Instantiate Jupiters moons
 		for(int i = CONST_OBJS; i < CONST_OBJS+J_MOONS; i++) 
