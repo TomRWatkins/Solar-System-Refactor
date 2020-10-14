@@ -1,2 +1,5 @@
 # Solar-System-Refactor
-The refactor of the entire code base for the Solar System Project in Year 2.
+A 2D model of our Solar System written in Java.
+
+
+Thomas Watkins
