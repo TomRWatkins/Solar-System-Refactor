@@ -38,4 +38,12 @@ public class Point {
 	public void incrementAngle(double velocity) {
 		this.angle+=velocity;
 	}
+	
+	/**
+	 * Increments the distance position held by this point by the velocity of the space object.
+	 * @param velocity the velocity of the space object of which is being incremented.
+	 */
+	public void incrementDistance(double velocity) {
+		this.distance+=velocity;
+	}
 }

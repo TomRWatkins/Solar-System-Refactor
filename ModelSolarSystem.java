@@ -3,11 +3,13 @@
  * @author Thomas Watkins
  */
 public class ModelSolarSystem {	
-	static final int CONST_OBJS = 16;
+	
+	static final int CONST_OBJS = 18;
 	static final int J_MOONS = 70;
 	static final int ASTEROIDS = 250;
 	static final int STARS = 250;
 	static final int TOTAL_OBJS = CONST_OBJS + J_MOONS + ASTEROIDS;
+	
 	/**
      * The main method instantiates the hard-coded solar objects in our solar system and 
      * assigns random parameters for Jupiter's Moons and Asteroids. Then periodically 
@@ -38,10 +40,13 @@ public class ModelSolarSystem {
 		spaceObjects[13] = new Planet(solarSystem, 500, 750, 35, 0.3, "YELLOW"); 			  //Saturn
 		spaceObjects[14] = new Planet(solarSystem, 220, 750, 25, 0.9, "CYAN"); 			      //Uranus
 		spaceObjects[15] = new Planet(solarSystem, 180, 150, 31, 1.06, "DARK_GRAY"); 	      //Neptune
+		spaceObjects[16] = new Comet(solarSystem, 0, 400, 11, 10.06, "WHITE"); 	              //Comet one
+		spaceObjects[17] = new Comet(solarSystem, 70, 100, 8, -5.06, "WHITE"); 	              //Comet two
+		
 		
 		//Instantiate Jupiters moons
 		for(int i = CONST_OBJS; i < CONST_OBJS+J_MOONS; i++) 
-			spaceObjects[i] = new Moon(spaceObjects[8], solarSystem, 50+Math.random()*10, Math.random(), 6-Math.random()*2, 2.5+Math.random());		
+			spaceObjects[i] = new Moon(spaceObjects[8], solarSystem, 50+Math.random()*10, Math.random(), 6-Math.random()*2, 0.5+Math.random());		
 		
 		//Instantiate Asteroids
 		for(int i = CONST_OBJS+J_MOONS; i < TOTAL_OBJS; i++) 		
