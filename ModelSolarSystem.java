@@ -12,13 +12,8 @@ public class ModelSolarSystem {
 	
 	/**
      * The main method instantiates the hard-coded solar objects in our solar system and 
-     * assigns random parameters for Jupiter's Moons and Asteroids. Then periodically 
+     * assigns random parameters for Jupiter's Moons, Asteroids and Stars. Then periodically 
      * calls each space objects move method to display a moving graphical model of our solar system.
-     * 
-     * @param CONST_OBJS is the total number of spaceObjects which are hard-coded.
-     * @param J_MOONS is the total number of Jupiter's Moons to be displayed.
-     * @param ASTEROIDS is the total number of Asteroids in the Asteroid belt.
-     * @param TOTAL_OBJS is the total number of Space Objects.
      */    
 	public static void main(String[] args) {
 		SolarSystem solarSystem = new SolarSystem(1200, 750);
