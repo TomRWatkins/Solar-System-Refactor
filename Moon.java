@@ -18,12 +18,13 @@ public class Moon extends SpaceObject{
 		super(solarSystem, distance, angle, diameter, velocity, "GRAY");
 		this.planetAbout = (Planet) planetAbout;		
 	}	
+	
 	/**
 	 * Moves this Moon by it's orbital velocity, around the planet it orbits.
 	 */
 	public void move() {				
-		solarSystem.drawSolarObjectAbout(this.planetAbout.getPoint().getDistance(), this.planetAbout.getPoint().getAngle(),
-				this.diameter, this.colour, this.point.getDistance(), this.point.getAngle());
-		this.point.incrementAngle(this.velocity);
+		this.getSolarSystem().drawSolarObjectAbout(this.planetAbout.getPoint().getDistance(), this.planetAbout.getPoint().getAngle(),
+				this.getDiameter(), this.getColour(), this.getPoint().getDistance(), this.getPoint().getAngle());
+		this.getPoint().incrementAngle(this.getVelocity());
 	}	
 }

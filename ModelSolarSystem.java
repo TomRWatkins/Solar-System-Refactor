@@ -1,9 +1,9 @@
 /**
  * The driver class for a two dimensional model of our solar system. 
+ * Attempting to achieve the *star* mark.
  * @author Thomas Watkins
  */
 public class ModelSolarSystem {	
-	
 	static final int CONST_OBJS = 18;
 	static final int J_MOONS = 70;
 	static final int ASTEROIDS = 250;
@@ -12,8 +12,8 @@ public class ModelSolarSystem {
 	
 	/**
      * The main method instantiates the hard-coded solar objects in our solar system and 
-     * assigns random parameters for Jupiter's Moons, Asteroids and Stars. Then periodically 
-     * calls each space objects move method to display a moving graphical model of our solar system.
+     * assigns random parameters for Jupiter's Moons, Asteroids, Comets and Stars. Then periodically 
+     * calls each Space Objects move method to display a moving graphical model of our solar system.
      */    
 	public static void main(String[] args) {
 		SolarSystem solarSystem = new SolarSystem(1200, 750);
@@ -35,8 +35,8 @@ public class ModelSolarSystem {
 		spaceObjects[13] = new Planet(solarSystem, 500, 750, 35, 0.3, "YELLOW"); 			  //Saturn
 		spaceObjects[14] = new Planet(solarSystem, 220, 750, 25, 0.9, "CYAN"); 			      //Uranus
 		spaceObjects[15] = new Planet(solarSystem, 180, 150, 31, 1.06, "DARK_GRAY"); 	      //Neptune
-		spaceObjects[16] = new Comet(solarSystem, 0, 400, 11, 10.06, "WHITE"); 	              //Comet one
-		spaceObjects[17] = new Comet(solarSystem, 70, 100, 8, -5.06, "WHITE"); 	              //Comet two
+		spaceObjects[16] = new Comet(solarSystem, 0, 400, 11, 13.06, "WHITE"); 	              //Comet one
+		spaceObjects[17] = new Comet(solarSystem, 70, 100, 8, -9.06, "WHITE"); 	              //Comet two
 		
 		
 		//Instantiate Jupiters moons
@@ -54,7 +54,8 @@ public class ModelSolarSystem {
 		//Move all spaceObjects
 		while(true) {
 			for(SpaceObject spaceObj: spaceObjects) 
-				spaceObj.move();			
+				spaceObj.move();	
+			
 			solarSystem.finishedDrawing();
 		}
 	}

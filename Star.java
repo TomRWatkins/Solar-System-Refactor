@@ -15,10 +15,11 @@ public class Star extends SpaceObject {
 	public Star(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity, String colour) {		
 		super(solarSystem, distance, angle, diameter, velocity, colour);			
 	}	
+	
 	/**
 	 * Displays this star to the screen.
 	 */
 	public void move() {		
-		this.solarSystem.drawSolarObject(this.point.getDistance(), this.point.getAngle(), this.diameter, this.colour);
+		this.getSolarSystem().drawSolarObject(this.getPoint().getDistance(), this.getPoint().getAngle(), this.getDiameter(), this.getColour());
 	}	
 }

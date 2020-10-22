@@ -20,6 +20,6 @@ public class Sun extends SpaceObject {
 	 * Displays the Sun to the screen. 
 	 */
 	public void move() {		
-		this.solarSystem.drawSolarObject(0, 0, this.diameter, this.colour);
+		this.getSolarSystem().drawSolarObject(0, 0, this.getDiameter(), this.getColour());
 	}
 }

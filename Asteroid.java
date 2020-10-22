@@ -15,11 +15,12 @@ public class Asteroid extends SpaceObject{
 	public Asteroid(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity, String colour) {
 		super(solarSystem, distance, angle, diameter, velocity, colour);			
 	}	
+	
 	/**
 	 * Moves this Asteroid by it's orbital velocity.	
 	 */
 	public void move() {	
-		this.solarSystem.drawSolarObject(this.point.getDistance(), this.point.getAngle(), this.diameter, this.colour);
-		this.point.incrementAngle(this.velocity);
+		this.getSolarSystem().drawSolarObject(this.getPoint().getDistance(), this.getPoint().getAngle(), this.getDiameter(), this.getColour());
+		this.getPoint().incrementAngle(this.getVelocity());
 	}
 }

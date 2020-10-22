@@ -15,24 +15,18 @@ public class Comet extends SpaceObject {
 	public Comet(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity, String colour) {		
 		super(solarSystem, distance, angle, diameter, velocity, colour);			
 	}	
+	
 	/**
 	 * Moves this Comet by it's orbital velocity. When the comet has moved far enough off the screen its axis will be 
-	 * re-valued and velocity will be reversed.	 
+	 * re-calculated randomly and velocity will be reversed.	 
 	 */
 	public void move() {		
-		this.solarSystem.drawSolarObject(this.point.getDistance(), this.point.getAngle(), this.diameter, this.colour);
-		this.point.incrementDistance(this.velocity);
+		this.getSolarSystem().drawSolarObject(this.getPoint().getDistance(), this.getPoint().getAngle(), this.getDiameter(), this.getColour());
+		this.getPoint().incrementDistance(this.getVelocity());
 		
-		if(this.point.getDistance() > 1100 || this.point.getDistance() < -1100) {
-			this.velocity *= -1;
-			this.point.incrementAngle(Math.random() * 150);
+		if(this.getPoint().getDistance() > 1100 || this.getPoint().getDistance() < -1100) {
+			this.setVelocity(this.getVelocity() * -1);
+			this.getPoint().incrementAngle(Math.random() * 150);
 		}
 	}	
-	/**
-	 * Returns this Comets Point holding information about its position in the solar system.
-	 * @return Point
-	 */
-	public Point getPoint() {
-		return this.point;
-	}
 }
