@@ -7,7 +7,7 @@ public class ModelSolarSystem {
 	static final int CONST_OBJS = 18;
 	static final int J_MOONS = 70;
 	static final int ASTEROIDS = 250;
-	static final int STARS = 250;
+	static final int STARS = 300;
 	static final int TOTAL_OBJS = CONST_OBJS + J_MOONS + ASTEROIDS;
 	
 	/**
@@ -27,12 +27,12 @@ public class ModelSolarSystem {
 		spaceObjects[5] = new Planet(solarSystem, 250, 600, 19, 0.5, "RED");  				  //Mars
 		spaceObjects[6] = new Moon(spaceObjects[5], solarSystem, 30, 1210, 10, 3.5);          //Deimos
 		spaceObjects[7] = new Moon(spaceObjects[5], solarSystem, 50, 0, 10, 2.8);             //Phobos
-		spaceObjects[8] = new Planet(solarSystem, 450, 180, 50, 0.9, "PINK"); 			      //Jupiter		
-		spaceObjects[9] = new Planet(solarSystem, 500, 750, 80, 0.9, "PINK"); 				  //Saturn Outer Ring
-		spaceObjects[10] = new Planet(solarSystem, 500, 750, 75, 0.9, "BLACK"); 			  //Saturn Black Space
-		spaceObjects[11] = new Planet(solarSystem, 500, 750, 65, 0.9, "PINK"); 			      //Saturn Inner Ring
-		spaceObjects[12] = new Planet(solarSystem, 500, 750, 60, 0.9, "BLACK"); 			  //Saturn Black Space
-		spaceObjects[13] = new Planet(solarSystem, 500, 750, 35, 0.9, "YELLOW"); 			  //Saturn
+		spaceObjects[8] = new Planet(solarSystem, 450, 180, 50, 0.4, "PINK"); 			      //Jupiter		
+		spaceObjects[9] = new Planet(solarSystem, 500, 750, 80, 0.3, "PINK"); 				  //Saturn Outer Ring
+		spaceObjects[10] = new Planet(solarSystem, 500, 750, 75, 0.3, "BLACK"); 			  //Saturn Black Space
+		spaceObjects[11] = new Planet(solarSystem, 500, 750, 65, 0.3, "PINK"); 			      //Saturn Inner Ring
+		spaceObjects[12] = new Planet(solarSystem, 500, 750, 60, 0.3, "BLACK"); 			  //Saturn Black Space
+		spaceObjects[13] = new Planet(solarSystem, 500, 750, 35, 0.3, "YELLOW"); 			  //Saturn
 		spaceObjects[14] = new Planet(solarSystem, 220, 750, 25, 0.9, "CYAN"); 			      //Uranus
 		spaceObjects[15] = new Planet(solarSystem, 180, 150, 31, 1.06, "DARK_GRAY"); 	      //Neptune
 		spaceObjects[16] = new Comet(solarSystem, 0, 400, 11, 13.06, "WHITE"); 	              //Comet one
