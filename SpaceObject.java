@@ -2,7 +2,7 @@
  * This class can be used to represent an arbitrary object in space. 
  * @author Thomas Watkins 
  */
-abstract public class SpaceObject {	
+public abstract class SpaceObject {	
 	private SolarSystem solarSystem;	
 	private double diameter;
 	private double velocity;
@@ -17,7 +17,7 @@ abstract public class SpaceObject {
 	 * @param velocity the velocity of this space object.
 	 * @param colour the colour of this space object.	  
 	 */
-	public SpaceObject(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity, String colour) {		
+	protected SpaceObject(SolarSystem solarSystem, double distance, double angle, double diameter, double velocity, String colour) {		
 		this.solarSystem = solarSystem;		
 		this.diameter = diameter;
 		this.velocity = velocity;
@@ -29,7 +29,7 @@ abstract public class SpaceObject {
 	 * Returns this Space Objects Solar System.
 	 * @return solarSystem
 	 */
-	public SolarSystem getSolarSystem() {
+	protected SolarSystem getSolarSystem() {
 		return this.solarSystem;
 	}
 	
@@ -37,7 +37,7 @@ abstract public class SpaceObject {
 	 * Returns this Space Objects Diameter.
 	 * @return diameter
 	 */
-	public double getDiameter() {
+	protected double getDiameter() {
 		return this.diameter;
 	}
 	
@@ -45,7 +45,7 @@ abstract public class SpaceObject {
 	 * Returns this Space Objects Velocity.
 	 * @return velocity
 	 */
-	public double getVelocity() {
+	protected double getVelocity() {
 		return this.velocity;
 	}
 	
@@ -53,7 +53,7 @@ abstract public class SpaceObject {
 	 * Returns this Space Objects Colour.
 	 * @return colour
 	 */
-	public String getColour() {
+	protected String getColour() {
 		return this.colour;
 	}
 	
@@ -61,7 +61,7 @@ abstract public class SpaceObject {
 	 * Returns this Space Objects Point.
 	 * @return point
 	 */
-	public Point getPoint() {
+	protected Point getPoint() {
 		return this.point;
 	}
 	
@@ -69,12 +69,12 @@ abstract public class SpaceObject {
 	 * Modifies this Space Objects Velocity.
 	 * @param velocity
 	 */
-	public void setVelocity(double velocity) {
+	protected void setVelocity(double velocity) {
 		this.velocity = velocity;
 	}
 	
 	/**
 	 * To be implemented by subclasses to display and move the Space Object within the Solar System.
 	 */
-	abstract public void move();
+	 protected abstract void move();
 }
