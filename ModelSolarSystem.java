@@ -17,7 +17,7 @@ public class ModelSolarSystem {
      */    
 	public static void main(String[] args) {
 		SolarSystem solarSystem = new SolarSystem(1200, 750);
-		SpaceObject spaceObjects[] = new SpaceObject[TOTAL_OBJS+STARS];
+		SpaceObject[] spaceObjects = new SpaceObject[TOTAL_OBJS+STARS];
 		
 		spaceObjects[0] = new Sun(solarSystem, 0, 0, 65, 0, "YELLOW"); 						  //Sun
 		spaceObjects[1] = new Planet(solarSystem, 180, 100, 20, 0.9, "BLUE"); 				  //Earth
