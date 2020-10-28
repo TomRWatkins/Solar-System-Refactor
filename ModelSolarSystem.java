@@ -20,16 +20,16 @@ public class ModelSolarSystem {
 		ArrayList<SpaceObject> spaceObjects = new ArrayList<SpaceObject>();
 		
 		spaceObjects.add(new Sun(solarSystem, 0, 0, 65, 0, "YELLOW")); 						  //Sun
-		Planet earth = new Planet(solarSystem, 180, 100, 20, 0.9, "BLUE");		              //Earth
+		SpaceObject earth = new Planet(solarSystem, 180, 100, 20, 0.9, "BLUE");		          //Earth
 		spaceObjects.add(earth); 				  
 		spaceObjects.add(new Moon(earth, solarSystem, 30, 0, 10, 5)); 	      				  //Earths Moon
 		spaceObjects.add(new Planet(solarSystem, 60, 200, 15, 1.5, "WHITE")); 				  //Mercury
 		spaceObjects.add(new Planet(solarSystem, 110, 400, 15, 1, "ORANGE")); 				  //Venus
-		Planet mars = new Planet(solarSystem, 250, 600, 19, 0.5, "RED"); 					  //Mars
+		SpaceObject mars = new Planet(solarSystem, 250, 600, 19, 0.5, "RED"); 				  //Mars
 		spaceObjects.add(mars);  				 
 		spaceObjects.add(new Moon(mars, solarSystem, 30, 1210, 10, 3.5));         			  //Deimos
 		spaceObjects.add(new Moon(mars, solarSystem, 50, 0, 10, 2.8));            			  //Phobos
-		Planet jupiter = new Planet(solarSystem, 450, 180, 50, 0.4, "PINK");				  //Jupiter	
+		SpaceObject jupiter = new Planet(solarSystem, 450, 180, 50, 0.4, "PINK");			  //Jupiter	
 		spaceObjects.add(jupiter); 			      	
 		spaceObjects.add(new Planet(solarSystem, 500, 750, 80, 0.3, "PINK")); 				  //Saturn Outer Ring
 		spaceObjects.add(new Planet(solarSystem, 500, 750, 75, 0.3, "BLACK")); 			      //Saturn Black Space
